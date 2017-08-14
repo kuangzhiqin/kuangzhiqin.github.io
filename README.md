@@ -1,2 +1,2 @@
 # kuangzhiqin.github.io
-邝智钦的个人主页
+欢迎来到邝智钦的个人主页

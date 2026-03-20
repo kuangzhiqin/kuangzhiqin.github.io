@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuang Zhiqin</title>
+    <meta
+      name="description"
+      content="A minimal personal site for Kuang Zhiqin — research focus, notes-in-progress, and GitHub presence."
+    />
+    <meta name="theme-color" content="#060816" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="ambient ambient-a"></div>
+      <div class="ambient ambient-b"></div>
+      <div class="grid"></div>
+      <div class="noise"></div>
+
+      <header class="topbar reveal">
+        <div class="brand-block">
+          <span class="eyebrow">Personal node</span>
+          <div class="brand-line">
+            <span class="brand-name">Kuang Zhiqin</span>
+            <span class="status-pill">
+              <span class="status-dot"></span>
+              Building quietly
+            </span>
+          </div>
+        </div>
+        <a class="ghost-link" href="https://github.com/kuangzhiqin" target="_blank" rel="noreferrer">
+          GitHub ↗
+        </a>
+      </header>
+
+      <main class="hero-layout">
+        <section class="hero-panel reveal" data-delay="0.06">
+          <p class="kicker">Research-minded / technology-oriented</p>
+          <h1>
+            I’m interested in building
+            <span>clear systems</span>
+            in complex technical space.
+          </h1>
+          <p class="lead">
+            This site is intentionally minimal: a small public surface for personal introduction,
+            current focus, and notes that are still taking shape.
+          </p>
+
+          <div class="signal-row">
+            <div class="signal-card">
+              <span class="signal-label">Orientation</span>
+              <strong>Engineering, research, iteration</strong>
+            </div>
+            <div class="signal-card">
+              <span class="signal-label">Preference</span>
+              <strong>Thoughtful work over noise</strong>
+            </div>
+          </div>
+        </section>
+
+        <aside class="side-stack">
+          <section class="info-panel reveal" data-delay="0.14">
+            <div class="panel-header">
+              <span class="panel-index">01</span>
+              <h2>Focus</h2>
+            </div>
+            <p>
+              Exploring technical ideas at the intersection of software, systems thinking,
+              and careful experimentation. I care about rigorous structure, elegant execution,
+              and work that remains useful after the novelty fades.
+            </p>
+          </section>
+
+          <section class="info-panel reveal" data-delay="0.22">
+            <div class="panel-header">
+              <span class="panel-index">02</span>
+              <h2>Notes</h2>
+            </div>
+            <p>
+              A proper notes section will appear here later. For now, think of this as a placeholder
+              for fragments, observations, and in-progress writing that deserves a calmer home.
+            </p>
+          </section>
+
+          <section class="info-panel terminal-panel reveal" data-delay="0.3">
+            <div class="terminal-head">
+              <span class="terminal-lights">
+                <i></i><i></i><i></i>
+              </span>
+              <span class="terminal-title">link://external/github</span>
+            </div>
+            <a class="terminal-link" href="https://github.com/kuangzhiqin" target="_blank" rel="noreferrer">
+              github.com/kuangzhiqin
+            </a>
+          </section>
+        </aside>
+      </main>
+
+      <footer class="footer reveal" data-delay="0.38">
+        <span class="footer-tag">Minimal public profile</span>
+        <span class="footer-separator"></span>
+        <span id="clock" aria-label="Current time"></span>
+      </footer>
+
+      <div class="cursor-glow" aria-hidden="true"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

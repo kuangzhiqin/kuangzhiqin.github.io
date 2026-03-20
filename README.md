@@ -1,22 +1,22 @@
 # kuangzhiqin.github.io
 
-A refined static personal homepage built for direct deployment to GitHub Pages.
+A polished static personal homepage designed for direct deployment to GitHub Pages.
 
 ## Design direction
 
-This version uses a **cyber-tech + researcher editorial** direction:
+This version uses a **dark indie developer** direction:
 
-- serif-led headline typography for a more distinctive voice
-- dark atmospheric background with grid, scanline, halo, and grain layers
-- asymmetrical composition with a large editorial hero and a structured information rail
-- restrained motion using reveal transitions, pointer aura, and subtle hero tilt
+- cleaner, product-minded structure instead of an editorial/research layout
+- modern sans-led typography with mono details for a more practical voice
+- dark but approachable visual system with subtle grid, glow, and terminal cues
 - minimal believable content only: intro, focus, notes placeholder, and GitHub link
+- lightweight motion with responsive layout and GitHub Pages-friendly plain HTML/CSS/JS
 
 ## Files
 
 - `index.html` — page structure and site content
 - `styles.css` — layout, typography, atmosphere, and responsive behavior
-- `script.js` — reveal animation, pointer aura, hero tilt, and live clock
+- `script.js` — reveal animation and live clock in the GitHub card
 
 ## Deploy to GitHub Pages
 
@@ -44,7 +44,7 @@ git init
 git branch -M main
 git remote add origin git@github.com:kuangzhiqin/kuangzhiqin.github.io.git
 git add .
-git commit -m "Redesign personal homepage"
+git commit -m "Refine homepage toward indie developer style"
 git push -u origin main
 ```
 
@@ -52,8 +52,8 @@ git push -u origin main
 
 Edit `index.html` to change:
 
-- the headline and intro copy
-- the `Focus` panel text
+- the hero headline and intro copy
+- the `Focus` section text
 - the `Notes` placeholder text
 - the GitHub URL if it changes
 
@@ -66,7 +66,7 @@ The fastest way to tune the visual system is by editing the CSS variables at the
 - `--text`
 - `--muted`
 - `--accent`
-- `--accent-2`
+- `--accent-warm`
 
 ## Notes
 

@@ -6,40 +6,37 @@
     <title>Kuang Zhiqin</title>
     <meta
       name="description"
-      content="Personal homepage of Kuang Zhiqin — a quiet, research-oriented surface for focus, notes, and GitHub."
+      content="Personal homepage of Kuang Zhiqin — an indie developer homepage focused on building useful software, thoughtful systems, and notes in progress."
     />
-    <meta name="theme-color" content="#050816" />
+    <meta name="theme-color" content="#0b1020" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="site-frame">
-      <div class="halo halo-a"></div>
-      <div class="halo halo-b"></div>
-      <div class="scanlines"></div>
-      <div class="mesh"></div>
-      <div class="grain"></div>
-      <div class="pointer-aura" aria-hidden="true"></div>
+    <div class="page-shell">
+      <div class="ambient ambient--a"></div>
+      <div class="ambient ambient--b"></div>
+      <div class="noise"></div>
 
-      <header class="masthead reveal">
-        <div class="masthead__identity">
-          <span class="mono-tag">Research surface / personal index</span>
-          <div class="masthead__line">
-            <span class="nameplate">Kuang Zhiqin</span>
-            <span class="live-chip">
-              <span class="live-chip__dot"></span>
-              Quietly in progress
+      <header class="topbar reveal">
+        <div class="brand-block">
+          <span class="eyebrow">Indie developer / personal site</span>
+          <div class="brand-row">
+            <a class="wordmark" href="#home">Kuang Zhiqin</a>
+            <span class="status-pill">
+              <span class="status-pill__dot"></span>
+              Building quietly
             </span>
           </div>
         </div>
 
         <a
-          class="top-link"
+          class="github-button"
           href="https://github.com/kuangzhiqin"
           target="_blank"
           rel="noreferrer"
@@ -48,73 +45,66 @@
         </a>
       </header>
 
-      <main class="composition">
-        <section class="hero reveal" data-delay="0.05">
-          <div class="hero__meta mono-tag">Technical curiosity / systems / notes</div>
+      <main class="layout" id="home">
+        <section class="hero reveal" data-delay="0.04">
+          <div class="hero__intro">
+            <span class="eyebrow">Software, systems, product-minded experiments</span>
+            <h1>I build small, useful things with care.</h1>
+            <p class="hero__summary">
+              I’m Kuang Zhiqin. This is a simple homepage for what I’m focused on:
+              thoughtful software, practical systems, and notes that are still taking shape.
+            </p>
+          </div>
 
-          <p class="hero__lede">A small public surface for ongoing work.</p>
-
-          <h1>
-            I care about
-            <span>rigorous thinking,</span>
-            elegant systems,
-            <span>and work that stays useful.</span>
-          </h1>
-
-          <p class="hero__body">
-            This homepage is intentionally narrow in scope: a brief self-introduction,
-            a snapshot of current focus, and a placeholder for notes that are still
-            being shaped. I prefer durable ideas, careful iteration, and clarity over noise.
-          </p>
-
-          <div class="signal-grid">
-            <article class="signal-card">
-              <span class="signal-card__label mono-tag">Orientation</span>
-              <p>Research-minded engineering with attention to structure, process, and long-term usefulness.</p>
+          <div class="hero__panel-grid">
+            <article class="mini-panel mini-panel--primary">
+              <span class="mini-panel__label">How I work</span>
+              <p>
+                I like calm iteration, clear structure, and shipping things that stay understandable after the first version.
+              </p>
             </article>
-            <article class="signal-card">
-              <span class="signal-card__label mono-tag">Working style</span>
-              <p>Slow enough to think well. Precise enough to ship cleanly.</p>
+
+            <article class="mini-panel">
+              <span class="mini-panel__label">What matters</span>
+              <p>
+                Useful interfaces, clean technical foundations, and products that feel intentional instead of overbuilt.
+              </p>
             </article>
           </div>
         </section>
 
-        <aside class="rail">
-          <section class="panel panel--focus reveal" data-delay="0.12">
-            <div class="panel__head">
-              <span class="panel__index mono-tag">01</span>
+        <section class="stack">
+          <article class="card reveal" data-delay="0.1">
+            <div class="card__head">
+              <span class="card__index">01</span>
               <h2>Focus</h2>
             </div>
             <p>
-              Exploring software, systems thinking, and careful experimentation.
-              I’m especially drawn to environments where technical depth and editorial clarity
-              need to coexist.
+              I’m most interested in building software that sits between engineering depth and product clarity — tools, workflows, and web experiences that are credible, usable, and quietly polished.
             </p>
-          </section>
+          </article>
 
-          <section class="panel panel--notes reveal" data-delay="0.2">
-            <div class="panel__head">
-              <span class="panel__index mono-tag">02</span>
+          <article class="card reveal" data-delay="0.16">
+            <div class="card__head">
+              <span class="card__index">02</span>
               <h2>Notes</h2>
             </div>
             <p>
-              A notes section will live here later. For now, consider this a reserved space
-              for fragments, observations, and in-progress writing that deserve a calmer archive.
+              Notes will show up here over time. For now, this is a placeholder for ideas, implementation details, and working observations worth keeping.
             </p>
-          </section>
+          </article>
 
-          <section class="panel panel--link reveal" data-delay="0.28">
-            <div class="panel__head panel__head--compact">
-              <span class="panel__index mono-tag">03</span>
-              <h2>External</h2>
+          <article class="card card--terminal reveal" data-delay="0.22">
+            <div class="card__head">
+              <span class="card__index">03</span>
+              <h2>Find me</h2>
             </div>
 
-            <div class="terminal-card">
-              <div class="terminal-card__top">
-                <span class="terminal-card__lights"><i></i><i></i><i></i></span>
-                <span class="mono-tag terminal-card__title">link://github/profile</span>
+            <div class="terminal-linkbox">
+              <div class="terminal-linkbox__meta">
+                <span>profile</span>
+                <span id="clock">Loading time…</span>
               </div>
-
               <a
                 class="terminal-link"
                 href="https://github.com/kuangzhiqin"
@@ -124,15 +114,9 @@
                 github.com/kuangzhiqin
               </a>
             </div>
-          </section>
-        </aside>
+          </article>
+        </section>
       </main>
-
-      <footer class="footer reveal" data-delay="0.34">
-        <span class="mono-tag footer__label">Static site / GitHub Pages</span>
-        <span class="footer__line"></span>
-        <span class="footer__clock mono-tag" id="clock" aria-label="Current time"></span>
-      </footer>
     </div>
 
     <script src="script.js"></script>

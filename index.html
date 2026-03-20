@@ -6,110 +6,133 @@
     <title>Kuang Zhiqin</title>
     <meta
       name="description"
-      content="A minimal personal site for Kuang Zhiqin — research focus, notes-in-progress, and GitHub presence."
+      content="Personal homepage of Kuang Zhiqin — a quiet, research-oriented surface for focus, notes, and GitHub."
     />
-    <meta name="theme-color" content="#060816" />
+    <meta name="theme-color" content="#050816" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <div class="ambient ambient-a"></div>
-      <div class="ambient ambient-b"></div>
-      <div class="grid"></div>
-      <div class="noise"></div>
+    <div class="site-frame">
+      <div class="halo halo-a"></div>
+      <div class="halo halo-b"></div>
+      <div class="scanlines"></div>
+      <div class="mesh"></div>
+      <div class="grain"></div>
+      <div class="pointer-aura" aria-hidden="true"></div>
 
-      <header class="topbar reveal">
-        <div class="brand-block">
-          <span class="eyebrow">Personal node</span>
-          <div class="brand-line">
-            <span class="brand-name">Kuang Zhiqin</span>
-            <span class="status-pill">
-              <span class="status-dot"></span>
-              Building quietly
+      <header class="masthead reveal">
+        <div class="masthead__identity">
+          <span class="mono-tag">Research surface / personal index</span>
+          <div class="masthead__line">
+            <span class="nameplate">Kuang Zhiqin</span>
+            <span class="live-chip">
+              <span class="live-chip__dot"></span>
+              Quietly in progress
             </span>
           </div>
         </div>
-        <a class="ghost-link" href="https://github.com/kuangzhiqin" target="_blank" rel="noreferrer">
+
+        <a
+          class="top-link"
+          href="https://github.com/kuangzhiqin"
+          target="_blank"
+          rel="noreferrer"
+        >
           GitHub ↗
         </a>
       </header>
 
-      <main class="hero-layout">
-        <section class="hero-panel reveal" data-delay="0.06">
-          <p class="kicker">Research-minded / technology-oriented</p>
+      <main class="composition">
+        <section class="hero reveal" data-delay="0.05">
+          <div class="hero__meta mono-tag">Technical curiosity / systems / notes</div>
+
+          <p class="hero__lede">A small public surface for ongoing work.</p>
+
           <h1>
-            I’m interested in building
-            <span>clear systems</span>
-            in complex technical space.
+            I care about
+            <span>rigorous thinking,</span>
+            elegant systems,
+            <span>and work that stays useful.</span>
           </h1>
-          <p class="lead">
-            This site is intentionally minimal: a small public surface for personal introduction,
-            current focus, and notes that are still taking shape.
+
+          <p class="hero__body">
+            This homepage is intentionally narrow in scope: a brief self-introduction,
+            a snapshot of current focus, and a placeholder for notes that are still
+            being shaped. I prefer durable ideas, careful iteration, and clarity over noise.
           </p>
 
-          <div class="signal-row">
-            <div class="signal-card">
-              <span class="signal-label">Orientation</span>
-              <strong>Engineering, research, iteration</strong>
-            </div>
-            <div class="signal-card">
-              <span class="signal-label">Preference</span>
-              <strong>Thoughtful work over noise</strong>
-            </div>
+          <div class="signal-grid">
+            <article class="signal-card">
+              <span class="signal-card__label mono-tag">Orientation</span>
+              <p>Research-minded engineering with attention to structure, process, and long-term usefulness.</p>
+            </article>
+            <article class="signal-card">
+              <span class="signal-card__label mono-tag">Working style</span>
+              <p>Slow enough to think well. Precise enough to ship cleanly.</p>
+            </article>
           </div>
         </section>
 
-        <aside class="side-stack">
-          <section class="info-panel reveal" data-delay="0.14">
-            <div class="panel-header">
-              <span class="panel-index">01</span>
+        <aside class="rail">
+          <section class="panel panel--focus reveal" data-delay="0.12">
+            <div class="panel__head">
+              <span class="panel__index mono-tag">01</span>
               <h2>Focus</h2>
             </div>
             <p>
-              Exploring technical ideas at the intersection of software, systems thinking,
-              and careful experimentation. I care about rigorous structure, elegant execution,
-              and work that remains useful after the novelty fades.
+              Exploring software, systems thinking, and careful experimentation.
+              I’m especially drawn to environments where technical depth and editorial clarity
+              need to coexist.
             </p>
           </section>
 
-          <section class="info-panel reveal" data-delay="0.22">
-            <div class="panel-header">
-              <span class="panel-index">02</span>
+          <section class="panel panel--notes reveal" data-delay="0.2">
+            <div class="panel__head">
+              <span class="panel__index mono-tag">02</span>
               <h2>Notes</h2>
             </div>
             <p>
-              A proper notes section will appear here later. For now, think of this as a placeholder
-              for fragments, observations, and in-progress writing that deserves a calmer home.
+              A notes section will live here later. For now, consider this a reserved space
+              for fragments, observations, and in-progress writing that deserve a calmer archive.
             </p>
           </section>
 
-          <section class="info-panel terminal-panel reveal" data-delay="0.3">
-            <div class="terminal-head">
-              <span class="terminal-lights">
-                <i></i><i></i><i></i>
-              </span>
-              <span class="terminal-title">link://external/github</span>
+          <section class="panel panel--link reveal" data-delay="0.28">
+            <div class="panel__head panel__head--compact">
+              <span class="panel__index mono-tag">03</span>
+              <h2>External</h2>
             </div>
-            <a class="terminal-link" href="https://github.com/kuangzhiqin" target="_blank" rel="noreferrer">
-              github.com/kuangzhiqin
-            </a>
+
+            <div class="terminal-card">
+              <div class="terminal-card__top">
+                <span class="terminal-card__lights"><i></i><i></i><i></i></span>
+                <span class="mono-tag terminal-card__title">link://github/profile</span>
+              </div>
+
+              <a
+                class="terminal-link"
+                href="https://github.com/kuangzhiqin"
+                target="_blank"
+                rel="noreferrer"
+              >
+                github.com/kuangzhiqin
+              </a>
+            </div>
           </section>
         </aside>
       </main>
 
-      <footer class="footer reveal" data-delay="0.38">
-        <span class="footer-tag">Minimal public profile</span>
-        <span class="footer-separator"></span>
-        <span id="clock" aria-label="Current time"></span>
+      <footer class="footer reveal" data-delay="0.34">
+        <span class="mono-tag footer__label">Static site / GitHub Pages</span>
+        <span class="footer__line"></span>
+        <span class="footer__clock mono-tag" id="clock" aria-label="Current time"></span>
       </footer>
-
-      <div class="cursor-glow" aria-hidden="true"></div>
     </div>
 
     <script src="script.js"></script>

@@ -1,32 +1,39 @@
 # kuangzhiqin.github.io
 
-A lightweight static personal site designed for direct deployment to GitHub Pages.
+A refined static personal homepage built for direct deployment to GitHub Pages.
+
+## Design direction
+
+This version uses a **cyber-tech + researcher editorial** direction:
+
+- serif-led headline typography for a more distinctive voice
+- dark atmospheric background with grid, scanline, halo, and grain layers
+- asymmetrical composition with a large editorial hero and a structured information rail
+- restrained motion using reveal transitions, pointer aura, and subtle hero tilt
+- minimal believable content only: intro, focus, notes placeholder, and GitHub link
 
 ## Files
 
-- `index.html` — site structure and content
-- `styles.css` — visual design, layout, typography, and animations
-- `script.js` — reveal motion, cursor glow, and live clock
+- `index.html` — page structure and site content
+- `styles.css` — layout, typography, atmosphere, and responsive behavior
+- `script.js` — reveal animation, pointer aura, hero tilt, and live clock
 
 ## Deploy to GitHub Pages
 
-This project is built with plain HTML/CSS/JS, so no build step is required.
+No build step is required.
 
 ### Option 1: User site repository (`kuangzhiqin.github.io`)
 
-If your GitHub repository is named exactly `kuangzhiqin.github.io`, GitHub will publish it as a user site.
-
 1. Create a GitHub repository named `kuangzhiqin.github.io`.
-2. Upload the contents of this folder to the root of that repository.
-3. Commit and push to the default branch (`main` is typical).
-4. Open the repository on GitHub.
-5. Go to **Settings → Pages**.
-6. Under **Build and deployment**, set:
+2. Upload this folder's contents to the repository root.
+3. Commit and push to the default branch.
+4. In GitHub, open **Settings → Pages**.
+5. Under **Build and deployment**, choose:
    - **Source**: `Deploy from a branch`
    - **Branch**: `main`
    - **Folder**: `/ (root)`
-7. Save the settings.
-8. After GitHub finishes publishing, your site should be available at:
+6. Save.
+7. The site should publish at:
    - `https://kuangzhiqin.github.io`
 
 ### Option 2: Push with Git locally
@@ -37,34 +44,22 @@ git init
 git branch -M main
 git remote add origin git@github.com:kuangzhiqin/kuangzhiqin.github.io.git
 git add .
-git commit -m "Initial personal site"
+git commit -m "Redesign personal homepage"
 git push -u origin main
 ```
 
-Then enable GitHub Pages in repository settings if needed.
-
 ## Customize the content
 
-### Change the intro text
+Edit `index.html` to change:
 
-Edit `index.html` and update:
+- the headline and intro copy
+- the `Focus` panel text
+- the `Notes` placeholder text
+- the GitHub URL if it changes
 
-- The main headline inside `<h1>`
-- The introduction paragraph with class `.lead`
-- The text in the `Focus` and `Notes` panels
+## Customize the style
 
-### Change the GitHub link
-
-Search for:
-
-- `https://github.com/kuangzhiqin`
-- `github.com/kuangzhiqin`
-
-Replace those values with your actual GitHub profile URL if it changes.
-
-### Change the visual style
-
-Edit `styles.css` and start with the `:root` variables near the top:
+The fastest way to tune the visual system is by editing the CSS variables at the top of `styles.css`, especially:
 
 - `--bg`
 - `--panel`
@@ -73,17 +68,9 @@ Edit `styles.css` and start with the `:root` variables near the top:
 - `--accent`
 - `--accent-2`
 
-These control most of the site colors and mood.
-
-### Remove or replace the live clock
-
-If you do not want the footer clock:
-
-1. Remove `<span id="clock"></span>` from `index.html`
-2. Remove the clock-related code from `script.js`
-
 ## Notes
 
-- The site is responsive and works well on desktop and mobile.
+- The site remains plain HTML/CSS/JS and is GitHub Pages friendly.
+- It is responsive for desktop and mobile.
 - Fonts are loaded from Google Fonts.
-- No framework, package manager, or build pipeline is needed.
+- Motion respects `prefers-reduced-motion`.

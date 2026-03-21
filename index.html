@@ -20,6 +20,8 @@
   <body>
     <div class="page-shell">
       <header class="site-header reveal" data-delay="0.04">
+        <a class="site-brand" href="#top" aria-label="Homepage">Kuang Zhiqin</a>
+
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
           <span></span>
           <span></span>
@@ -29,7 +31,7 @@
 
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
           <a class="site-nav__link site-nav__link--active" href="#top">Home</a>
-          <a class="site-nav__link" href="#overview">Overview</a>
+          <a class="site-nav__link" href="#overview">Approach</a>
           <a class="site-nav__link" href="#notes">Notes</a>
         </nav>
 
@@ -52,9 +54,12 @@
       <main id="top" class="page-main">
         <section class="hero reveal" data-delay="0.1">
           <div class="hero__copy">
-            <p class="eyebrow">Kuang Zhiqin</p>
-            <h1>I build digital work with patience, clarity, and composure.</h1>
-            <p class="hero__subtitle">Software engineer · product-minded builder · calm systems</p>
+            <p class="eyebrow">Software engineer · product-minded builder</p>
+            <h1>Calm digital work, shaped with patience and clear structure.</h1>
+            <p class="hero__lead">
+              I’m Kuang Zhiqin. I like building software that feels composed,
+              understandable, and useful long after the first release.
+            </p>
 
             <div class="hero__meta">
               <a
@@ -65,92 +70,92 @@
                 aria-label="Visit GitHub profile"
               >
                 <span class="social-link__icon">↗</span>
-                <span>GitHub</span>
+                <span>View GitHub</span>
               </a>
             </div>
           </div>
 
-          <div class="hero__visual">
-            <div class="hero-card">
-              <div class="hero-card__halo" aria-hidden="true"></div>
-              <div class="hero-card__inner">
-                <div>
-                  <p class="hero-card__label">Current local time</p>
-                  <strong id="local-time">Loading…</strong>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="visual-anchor">
+              <div class="visual-anchor__panel">
+                <div class="visual-anchor__topline"></div>
+                <div class="visual-anchor__content">
+                  <div>
+                    <p class="hero-card__label">Current local time</p>
+                    <strong id="local-time">Loading…</strong>
+                  </div>
+                  <p class="visual-anchor__note">Quiet systems · careful iteration · durable interfaces</p>
                 </div>
-                <div class="hero-card__mark" aria-hidden="true">KZQ</div>
+                <div class="visual-anchor__mark">KZQ</div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="intro-band reveal" data-delay="0.16">
-          <p>
-            I’m interested in useful tools, carefully structured interfaces, and software
-            that stays understandable after the first version.
+        <section class="bridge reveal" data-delay="0.14">
+          <p class="bridge__label">Intro</p>
+          <p class="bridge__text">
+            A restrained homepage for work in progress, current interests, and notes still waiting to be written.
           </p>
         </section>
 
         <section class="overview reveal" id="overview" data-delay="0.2">
-          <div class="section-intro">
+          <div class="section-rail">
             <p class="eyebrow">Overview</p>
-            <h2>A compact homepage with only the essentials.</h2>
+            <h2>Only the essentials, ordered with intention.</h2>
           </div>
 
-          <div class="stack-list">
-            <article class="stack-card">
-              <div class="stack-card__head">
-                <span class="stack-card__index">01</span>
+          <div class="detail-list">
+            <article class="detail-row">
+              <span class="detail-row__index">01</span>
+              <div class="detail-row__body">
                 <h3>Focus</h3>
+                <p>
+                  Practical software, restrained aesthetics, and systems that feel reliable before they try to feel impressive.
+                </p>
               </div>
-              <p>
-                I care about practical software, restrained aesthetics, and systems that
-                feel reliable before they feel impressive.
-              </p>
             </article>
 
-            <article class="stack-card">
-              <div class="stack-card__head">
-                <span class="stack-card__index">02</span>
+            <article class="detail-row">
+              <span class="detail-row__index">02</span>
+              <div class="detail-row__body">
                 <h3>Working style</h3>
+                <p>
+                  Reduce noise, define the structure early, and keep each pass clear enough that the next one can happen without friction.
+                </p>
               </div>
-              <p>
-                Reduce noise, shape the structure early, and keep each iteration clear
-                enough that the next one can happen without friction.
-              </p>
             </article>
 
-            <article class="stack-card" id="notes">
-              <div class="stack-card__head">
-                <span class="stack-card__index">03</span>
+            <article class="detail-row" id="notes">
+              <span class="detail-row__index">03</span>
+              <div class="detail-row__body">
                 <h3>Notes</h3>
+                <p>
+                  A placeholder for observations, implementation details, and unfinished thoughts worth returning to later.
+                </p>
               </div>
-              <p>
-                A placeholder for observations, implementation details, and unfinished
-                thoughts worth returning to later.
-              </p>
             </article>
 
-            <article class="stack-card stack-card--link">
-              <div class="stack-card__head">
-                <span class="stack-card__index">04</span>
-                <h3>Link</h3>
+            <article class="detail-row detail-row--link">
+              <span class="detail-row__index">04</span>
+              <div class="detail-row__body">
+                <h3>GitHub</h3>
+                <a
+                  class="project-link"
+                  href="https://github.com/kuangzhiqin"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span class="project-link__label">github.com/kuangzhiqin</span>
+                  <span class="project-link__title">Code, experiments, and work in progress ↗</span>
+                </a>
               </div>
-              <a
-                class="project-link"
-                href="https://github.com/kuangzhiqin"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span class="project-link__label">github.com/kuangzhiqin</span>
-                <span class="project-link__title">See code, experiments, and work in progress ↗</span>
-              </a>
             </article>
           </div>
         </section>
       </main>
 
-      <footer class="site-footer reveal" data-delay="0.22">
+      <footer class="site-footer reveal" data-delay="0.24">
         <span>© <span id="year">2026</span> Kuang Zhiqin</span>
         <a href="#top">Back to top</a>
       </footer>

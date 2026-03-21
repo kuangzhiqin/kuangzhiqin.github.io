@@ -6,114 +6,136 @@
     <title>Kuang Zhiqin</title>
     <meta
       name="description"
-      content="Personal homepage of Kuang Zhiqin — an indie developer homepage focused on building useful software, thoughtful systems, and notes in progress."
+      content="Personal homepage of Kuang Zhiqin — thoughtful software, elegant systems, and notes still taking shape."
     />
-    <meta name="theme-color" content="#0b1020" />
+    <meta name="theme-color" content="#ece7df" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Familjen+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <div class="ambient ambient--a"></div>
-      <div class="ambient ambient--b"></div>
-      <div class="noise"></div>
+    <div class="site-noise" aria-hidden="true"></div>
+    <div class="site-glow site-glow--left" aria-hidden="true"></div>
+    <div class="site-glow site-glow--right" aria-hidden="true"></div>
+    <div class="site-orbit" aria-hidden="true">
+      <span class="site-orbit__ring"></span>
+      <span class="site-orbit__ring site-orbit__ring--inner"></span>
+    </div>
 
-      <header class="topbar reveal">
-        <div class="brand-block">
-          <span class="eyebrow">Indie developer / personal site</span>
-          <div class="brand-row">
-            <a class="wordmark" href="#home">Kuang Zhiqin</a>
-            <span class="status-pill">
-              <span class="status-pill__dot"></span>
-              Building quietly
-            </span>
-          </div>
+    <div class="page-frame">
+      <header class="masthead reveal" data-reveal="hero" data-delay="0.05">
+        <div>
+          <p class="kicker">Kuang Zhiqin / personal homepage</p>
+          <a class="wordmark" href="#top">KZQ</a>
         </div>
 
-        <a
-          class="github-button"
-          href="https://github.com/kuangzhiqin"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub ↗
-        </a>
+        <div class="masthead__meta">
+          <span class="availability">
+            <span class="availability__dot"></span>
+            Working quietly
+          </span>
+          <a
+            class="text-link"
+            href="https://github.com/kuangzhiqin"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub ↗
+          </a>
+        </div>
       </header>
 
-      <main class="layout" id="home">
-        <section class="hero reveal" data-delay="0.04">
-          <div class="hero__intro">
-            <span class="eyebrow">Software, systems, product-minded experiments</span>
-            <h1>I build small, useful things with care.</h1>
-            <p class="hero__summary">
-              I’m Kuang Zhiqin. This is a simple homepage for what I’m focused on:
-              thoughtful software, practical systems, and notes that are still taking shape.
-            </p>
+      <main id="top">
+        <section class="hero">
+          <div class="hero__lead reveal" data-reveal="hero" data-delay="0.12">
+            <p class="hero__eyebrow">Thoughtful software · systems · web experiences</p>
+            <h1>
+              I build digital work
+              <span>with patience, structure,</span>
+              and a preference for clarity.
+            </h1>
           </div>
 
-          <div class="hero__panel-grid">
-            <article class="mini-panel mini-panel--primary">
-              <span class="mini-panel__label">How I work</span>
-              <p>
-                I like calm iteration, clear structure, and shipping things that stay understandable after the first version.
-              </p>
-            </article>
+          <div class="hero__aside reveal" data-reveal="hero" data-delay="0.24">
+            <p>
+              I’m Kuang Zhiqin. I care about useful tools, calm interfaces, and products that feel deliberate rather than loud.
+            </p>
+            <div class="hero__signal">
+              <span>Current rhythm</span>
+              <strong id="local-time">Loading local time…</strong>
+            </div>
+          </div>
 
-            <article class="mini-panel">
-              <span class="mini-panel__label">What matters</span>
-              <p>
-                Useful interfaces, clean technical foundations, and products that feel intentional instead of overbuilt.
-              </p>
-            </article>
+          <div class="hero__foot reveal" data-reveal="hero" data-delay="0.34">
+            <a class="pill-action" href="#focus">Enter</a>
+            <p>
+              A minimal homepage for what I do, what I’m focused on, and a small place for notes as they arrive.
+            </p>
           </div>
         </section>
 
-        <section class="stack">
-          <article class="card reveal" data-delay="0.1">
-            <div class="card__head">
-              <span class="card__index">01</span>
-              <h2>Focus</h2>
+        <section class="story-grid" id="focus">
+          <article class="panel panel--statement reveal" data-delay="0.06">
+            <div class="panel__label-row">
+              <span class="panel__index">01</span>
+              <span class="panel__label">Focus</span>
             </div>
+            <h2>Engineering depth, product calm.</h2>
             <p>
-              I’m most interested in building software that sits between engineering depth and product clarity — tools, workflows, and web experiences that are credible, usable, and quietly polished.
+              I’m most interested in software that balances solid implementation with a composed user experience — systems that do real work without feeling heavy.
             </p>
           </article>
 
-          <article class="card reveal" data-delay="0.16">
-            <div class="card__head">
-              <span class="card__index">02</span>
-              <h2>Notes</h2>
+          <article class="panel panel--details reveal" data-delay="0.12">
+            <div class="panel__label-row">
+              <span class="panel__index">02</span>
+              <span class="panel__label">How I like to work</span>
             </div>
+            <ul class="detail-list">
+              <li>reduce complexity until the core feels obvious</li>
+              <li>ship in clear iterations instead of theatrical launches</li>
+              <li>keep the structure understandable after the first version</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="editorial-band reveal" data-delay="0.1">
+          <div class="editorial-band__line"></div>
+          <p>
+            Good software rarely needs to shout. It needs to hold together — visually, technically, and over time.
+          </p>
+        </section>
+
+        <section class="notes-grid">
+          <article class="panel panel--notes reveal" data-delay="0.08">
+            <div class="panel__label-row">
+              <span class="panel__index">03</span>
+              <span class="panel__label">Notes</span>
+            </div>
+            <h2>A space for observations and unfinished thoughts.</h2>
             <p>
-              Notes will show up here over time. For now, this is a placeholder for ideas, implementation details, and working observations worth keeping.
+              Notes will live here over time: implementation details, product questions, small lessons, and fragments worth keeping.
             </p>
           </article>
 
-          <article class="card card--terminal reveal" data-delay="0.22">
-            <div class="card__head">
-              <span class="card__index">03</span>
-              <h2>Find me</h2>
+          <article class="panel panel--link reveal" data-delay="0.16">
+            <div class="panel__label-row">
+              <span class="panel__index">04</span>
+              <span class="panel__label">Selected link</span>
             </div>
-
-            <div class="terminal-linkbox">
-              <div class="terminal-linkbox__meta">
-                <span>profile</span>
-                <span id="clock">Loading time…</span>
-              </div>
-              <a
-                class="terminal-link"
-                href="https://github.com/kuangzhiqin"
-                target="_blank"
-                rel="noreferrer"
-              >
-                github.com/kuangzhiqin
-              </a>
-            </div>
+            <a
+              class="link-card"
+              href="https://github.com/kuangzhiqin"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="link-card__top">github.com/kuangzhiqin</span>
+              <span class="link-card__bottom">See code, experiments, and works in progress ↗</span>
+            </a>
           </article>
         </section>
       </main>

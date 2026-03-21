@@ -1,31 +1,13 @@
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const revealItems = document.querySelectorAll('.reveal');
-const clock = document.getElementById('clock');
+const localTime = document.getElementById('local-time');
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-
-      const delay = Number(entry.target.dataset.delay || 0);
-      window.setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, delay * 1000);
-
-      revealObserver.unobserve(entry.target);
-    });
-  },
-  {
-    threshold: 0.16,
-  }
-);
-
-revealItems.forEach((item) => revealObserver.observe(item));
-
-const updateClock = () => {
-  if (!clock) return;
+const updateLocalTime = () => {
+  if (!localTime) return;
 
   const now = new Date();
-  clock.textContent = now.toLocaleString('en-US', {
+  localTime.textContent = now.toLocaleString('en-US', {
+    weekday: 'short',
     month: 'short',
     day: '2-digit',
     hour: '2-digit',
@@ -34,5 +16,65 @@ const updateClock = () => {
   });
 };
 
-updateClock();
-window.setInterval(updateClock, 1000 * 30);
+updateLocalTime();
+window.setInterval(updateLocalTime, 30000);
+
+if (!prefersReducedMotion) {
+  window.requestAnimationFrame(() => {
+    document.body.classList.add('is-ready');
+  });
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const delay = Number(entry.target.dataset.delay || 0);
+        window.setTimeout(() => {
+          entry.target.classList.add('reveal-visible');
+        }, delay * 1000);
+
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.18,
+      rootMargin: '0px 0px -8% 0px',
+    }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  const setDrift = (x, y) => {
+    document.documentElement.style.setProperty('--drift-x', `${x}px`);
+    document.documentElement.style.setProperty('--drift-y', `${y}px`);
+  };
+
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  let scrollShift = 0;
+
+  window.addEventListener('pointermove', (event) => {
+    const x = (event.clientX / window.innerWidth - 0.5) * 24;
+    const y = (event.clientY / window.innerHeight - 0.5) * 20;
+    targetX = x;
+    targetY = y;
+  });
+
+  window.addEventListener('scroll', () => {
+    scrollShift = Math.min(window.scrollY * 0.025, 16);
+  }, { passive: true });
+
+  const animateDrift = () => {
+    currentX += (targetX - currentX) * 0.06;
+    currentY += (targetY - currentY) * 0.06;
+    setDrift(currentX, currentY + scrollShift);
+    window.requestAnimationFrame(animateDrift);
+  };
+
+  animateDrift();
+} else {
+  revealItems.forEach((item) => item.classList.add('reveal-visible'));
+}

@@ -8,38 +8,30 @@
       name="description"
       content="Personal homepage of Kuang Zhiqin — thoughtful software, elegant systems, and notes still taking shape."
     />
-    <meta name="theme-color" content="#ece7df" />
+    <meta name="theme-color" content="#ede8df" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Familjen+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Familjen+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="site-noise" aria-hidden="true"></div>
-    <div class="site-glow site-glow--left" aria-hidden="true"></div>
-    <div class="site-glow site-glow--right" aria-hidden="true"></div>
-    <div class="site-orbit" aria-hidden="true">
-      <span class="site-orbit__ring"></span>
-      <span class="site-orbit__ring site-orbit__ring--inner"></span>
-    </div>
-
-    <div class="page-frame">
-      <header class="masthead reveal" data-reveal="hero" data-delay="0.05">
-        <div>
-          <p class="kicker">Kuang Zhiqin / personal homepage</p>
-          <a class="wordmark" href="#top">KZQ</a>
+    <div class="page-shell">
+      <header class="site-header reveal" data-delay="0.04">
+        <div class="site-header__identity">
+          <p class="eyebrow">Kuang Zhiqin / personal homepage</p>
+          <a class="wordmark" href="#top" aria-label="Back to top">KZQ</a>
         </div>
 
-        <div class="masthead__meta">
-          <span class="availability">
-            <span class="availability__dot"></span>
+        <div class="site-header__meta">
+          <span class="status-badge">
+            <span class="status-badge__dot"></span>
             Working quietly
           </span>
           <a
-            class="text-link"
+            class="inline-link"
             href="https://github.com/kuangzhiqin"
             target="_blank"
             rel="noreferrer"
@@ -49,53 +41,56 @@
         </div>
       </header>
 
-      <main id="top">
-        <section class="hero">
-          <div class="hero__lead reveal" data-reveal="hero" data-delay="0.12">
-            <p class="hero__eyebrow">Thoughtful software · systems · web experiences</p>
+      <main id="top" class="page-main">
+        <section class="hero section reveal" data-delay="0.1">
+          <div class="hero__intro">
+            <p class="eyebrow">Thoughtful software · systems · web experiences</p>
             <h1>
-              I build digital work
-              <span>with patience, structure,</span>
-              and a preference for clarity.
+              I build digital work with patience, structure,
+              <span>and a preference for clarity.</span>
             </h1>
           </div>
 
-          <div class="hero__aside reveal" data-reveal="hero" data-delay="0.24">
-            <p>
-              I’m Kuang Zhiqin. I care about useful tools, calm interfaces, and products that feel deliberate rather than loud.
+          <div class="hero__support">
+            <p class="lead">
+              I’m Kuang Zhiqin. I care about useful tools, calm interfaces, and products
+              that feel deliberate rather than loud.
             </p>
-            <div class="hero__signal">
-              <span>Current rhythm</span>
+
+            <div class="signal-block">
+              <span class="signal-block__label">Current rhythm</span>
               <strong id="local-time">Loading local time…</strong>
             </div>
-          </div>
 
-          <div class="hero__foot reveal" data-reveal="hero" data-delay="0.34">
-            <a class="pill-action" href="#focus">Enter</a>
-            <p>
-              A minimal homepage for what I do, what I’m focused on, and a small place for notes as they arrive.
-            </p>
+            <div class="hero__actions">
+              <a class="primary-link" href="#focus">Enter</a>
+              <p>
+                A minimal homepage for what I do, how I like to work, and a small place
+                for notes as they arrive.
+              </p>
+            </div>
           </div>
         </section>
 
-        <section class="story-grid" id="focus">
-          <article class="panel panel--statement reveal" data-delay="0.06">
-            <div class="panel__label-row">
-              <span class="panel__index">01</span>
-              <span class="panel__label">Focus</span>
+        <section class="section section--split" id="focus">
+          <article class="content-block reveal" data-delay="0.06">
+            <div class="section-heading">
+              <span class="section-heading__index">01</span>
+              <span class="section-heading__label">Focus</span>
             </div>
             <h2>Engineering depth, product calm.</h2>
             <p>
-              I’m most interested in software that balances solid implementation with a composed user experience — systems that do real work without feeling heavy.
+              I’m most interested in software that balances solid implementation with a
+              composed user experience — systems that do real work without feeling heavy.
             </p>
           </article>
 
-          <article class="panel panel--details reveal" data-delay="0.12">
-            <div class="panel__label-row">
-              <span class="panel__index">02</span>
-              <span class="panel__label">How I like to work</span>
+          <article class="content-block content-block--compact reveal" data-delay="0.14">
+            <div class="section-heading">
+              <span class="section-heading__index">02</span>
+              <span class="section-heading__label">Working style</span>
             </div>
-            <ul class="detail-list">
+            <ul class="principles-list">
               <li>reduce complexity until the core feels obvious</li>
               <li>ship in clear iterations instead of theatrical launches</li>
               <li>keep the structure understandable after the first version</li>
@@ -103,29 +98,31 @@
           </article>
         </section>
 
-        <section class="editorial-band reveal" data-delay="0.1">
-          <div class="editorial-band__line"></div>
+        <section class="quote-band reveal" data-delay="0.08">
+          <div class="quote-band__rule" aria-hidden="true"></div>
           <p>
-            Good software rarely needs to shout. It needs to hold together — visually, technically, and over time.
+            Good software rarely needs to shout. It needs to hold together — visually,
+            technically, and over time.
           </p>
         </section>
 
-        <section class="notes-grid">
-          <article class="panel panel--notes reveal" data-delay="0.08">
-            <div class="panel__label-row">
-              <span class="panel__index">03</span>
-              <span class="panel__label">Notes</span>
+        <section class="section section--split section--closing">
+          <article class="content-block reveal" data-delay="0.06">
+            <div class="section-heading">
+              <span class="section-heading__index">03</span>
+              <span class="section-heading__label">Notes</span>
             </div>
-            <h2>A space for observations and unfinished thoughts.</h2>
+            <h2>A place for observations and unfinished thoughts.</h2>
             <p>
-              Notes will live here over time: implementation details, product questions, small lessons, and fragments worth keeping.
+              Notes will live here over time: implementation details, product questions,
+              small lessons, and fragments worth keeping.
             </p>
           </article>
 
-          <article class="panel panel--link reveal" data-delay="0.16">
-            <div class="panel__label-row">
-              <span class="panel__index">04</span>
-              <span class="panel__label">Selected link</span>
+          <article class="content-block content-block--link reveal" data-delay="0.14">
+            <div class="section-heading">
+              <span class="section-heading__index">04</span>
+              <span class="section-heading__label">Selected link</span>
             </div>
             <a
               class="link-card"
@@ -133,8 +130,8 @@
               target="_blank"
               rel="noreferrer"
             >
-              <span class="link-card__top">github.com/kuangzhiqin</span>
-              <span class="link-card__bottom">See code, experiments, and works in progress ↗</span>
+              <span class="link-card__eyebrow">github.com/kuangzhiqin</span>
+              <span class="link-card__title">See code, experiments, and works in progress ↗</span>
             </a>
           </article>
         </section>

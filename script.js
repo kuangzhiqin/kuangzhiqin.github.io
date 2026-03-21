@@ -19,11 +19,9 @@ const updateLocalTime = () => {
 updateLocalTime();
 window.setInterval(updateLocalTime, 30000);
 
-if (!prefersReducedMotion) {
-  window.requestAnimationFrame(() => {
-    document.body.classList.add('is-ready');
-  });
-
+if (prefersReducedMotion) {
+  revealItems.forEach((item) => item.classList.add('reveal-visible'));
+} else {
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -39,42 +37,17 @@ if (!prefersReducedMotion) {
     },
     {
       threshold: 0.18,
-      rootMargin: '0px 0px -8% 0px',
+      rootMargin: '0px 0px -10% 0px',
     }
   );
 
   revealItems.forEach((item) => revealObserver.observe(item));
 
-  const setDrift = (x, y) => {
-    document.documentElement.style.setProperty('--drift-x', `${x}px`);
-    document.documentElement.style.setProperty('--drift-y', `${y}px`);
-  };
-
-  let targetX = 0;
-  let targetY = 0;
-  let currentX = 0;
-  let currentY = 0;
-  let scrollShift = 0;
-
-  window.addEventListener('pointermove', (event) => {
-    const x = (event.clientX / window.innerWidth - 0.5) * 24;
-    const y = (event.clientY / window.innerHeight - 0.5) * 20;
-    targetX = x;
-    targetY = y;
+  window.requestAnimationFrame(() => {
+    const hero = document.querySelector('.hero.reveal');
+    if (hero) {
+      hero.classList.add('reveal-visible');
+      revealObserver.unobserve(hero);
+    }
   });
-
-  window.addEventListener('scroll', () => {
-    scrollShift = Math.min(window.scrollY * 0.025, 16);
-  }, { passive: true });
-
-  const animateDrift = () => {
-    currentX += (targetX - currentX) * 0.06;
-    currentY += (targetY - currentY) * 0.06;
-    setDrift(currentX, currentY + scrollShift);
-    window.requestAnimationFrame(animateDrift);
-  };
-
-  animateDrift();
-} else {
-  revealItems.forEach((item) => item.classList.add('reveal-visible'));
 }

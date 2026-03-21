@@ -4,19 +4,19 @@ A polished static personal homepage designed for direct deployment to GitHub Pag
 
 ## Design direction
 
-This version uses a **dark indie developer** direction:
+This pass keeps the existing warm neutral palette, but shifts the page architecture toward a calmer portfolio-home layout:
 
-- cleaner, product-minded structure instead of an editorial/research layout
-- modern sans-led typography with mono details for a more practical voice
-- dark but approachable visual system with subtle grid, glow, and terminal cues
-- minimal believable content only: intro, focus, notes placeholder, and GitHub link
-- lightweight motion with responsive layout and GitHub Pages-friendly plain HTML/CSS/JS
+- light top navigation with compact utility actions
+- large split hero with text on the left and a visual panel on the right
+- short intro band to bridge the hero into the page body
+- stacked card-style overview section for focus, working style, notes, and GitHub
+- refined minimal motion and plain HTML/CSS/JS only
 
 ## Files
 
-- `index.html` — page structure and site content
+- `index.html` — page structure and content
 - `styles.css` — layout, typography, atmosphere, and responsive behavior
-- `script.js` — reveal animation and live clock in the GitHub card
+- `script.js` — reveal animation, live clock, footer year, and mobile nav toggle
 
 ## Deploy to GitHub Pages
 
@@ -44,7 +44,7 @@ git init
 git branch -M main
 git remote add origin git@github.com:kuangzhiqin/kuangzhiqin.github.io.git
 git add .
-git commit -m "Refine homepage toward indie developer style"
+git commit -m "Restructure homepage toward a calmer portfolio layout"
 git push -u origin main
 ```
 
@@ -52,9 +52,8 @@ git push -u origin main
 
 Edit `index.html` to change:
 
-- the hero headline and intro copy
-- the `Focus` section text
-- the `Notes` placeholder text
+- the hero headline and subtitle
+- the overview card copy
 - the GitHub URL if it changes
 
 ## Customize the style
@@ -62,15 +61,15 @@ Edit `index.html` to change:
 The fastest way to tune the visual system is by editing the CSS variables at the top of `styles.css`, especially:
 
 - `--bg`
-- `--panel`
-- `--text`
+- `--bg-deep`
+- `--surface`
+- `--ink`
 - `--muted`
 - `--accent`
-- `--accent-warm`
 
 ## Notes
 
-- The site remains plain HTML/CSS/JS and is GitHub Pages friendly.
+- The site remains plain HTML/CSS/JS and GitHub Pages friendly.
 - It is responsive for desktop and mobile.
 - Fonts are loaded from Google Fonts.
 - Motion respects `prefers-reduced-motion`.

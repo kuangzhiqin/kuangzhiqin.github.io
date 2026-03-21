@@ -1,6 +1,9 @@
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const revealItems = document.querySelectorAll('.reveal');
 const localTime = document.getElementById('local-time');
+const year = document.getElementById('year');
+const navToggle = document.querySelector('.nav-toggle');
+const siteNav = document.getElementById('site-nav');
 
 const updateLocalTime = () => {
   if (!localTime) return;
@@ -16,8 +19,20 @@ const updateLocalTime = () => {
   });
 };
 
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
 updateLocalTime();
 window.setInterval(updateLocalTime, 30000);
+
+if (navToggle && siteNav) {
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    siteNav.classList.toggle('site-nav--open');
+  });
+}
 
 if (prefersReducedMotion) {
   revealItems.forEach((item) => item.classList.add('reveal-visible'));
@@ -36,7 +51,7 @@ if (prefersReducedMotion) {
       });
     },
     {
-      threshold: 0.18,
+      threshold: 0.16,
       rootMargin: '0px 0px -10% 0px',
     }
   );

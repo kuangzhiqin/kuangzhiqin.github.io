@@ -31,7 +31,8 @@
 
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
           <a class="site-nav__link site-nav__link--active" href="#top">Home</a>
-          <a class="site-nav__link" href="#overview">Approach</a>
+          <a class="site-nav__link" href="#intro">Intro</a>
+          <a class="site-nav__link" href="#practice">Approach</a>
           <a class="site-nav__link" href="#notes">Notes</a>
         </nav>
 
@@ -61,30 +62,44 @@
               understandable, and useful long after the first release.
             </p>
 
-            <div class="hero__meta">
-              <a
-                class="social-link"
-                href="https://github.com/kuangzhiqin"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Visit GitHub profile"
-              >
-                <span class="social-link__icon">↗</span>
-                <span>View GitHub</span>
-              </a>
+            <div class="hero__strip" aria-label="Personal summary">
+              <div class="hero__strip-item">
+                <span class="hero__strip-label">Focus</span>
+                <p>Practical systems with restrained interfaces.</p>
+              </div>
+              <div class="hero__strip-item">
+                <span class="hero__strip-label">Working style</span>
+                <p>Define the structure early, then refine with care.</p>
+              </div>
             </div>
           </div>
 
           <div class="hero__visual" aria-hidden="true">
             <div class="visual-anchor">
+              <div class="visual-anchor__frame"></div>
               <div class="visual-anchor__panel">
                 <div class="visual-anchor__topline"></div>
                 <div class="visual-anchor__content">
-                  <div>
-                    <p class="hero-card__label">Current local time</p>
-                    <strong id="local-time">Loading…</strong>
+                  <div class="visual-anchor__meta">
+                    <div>
+                      <p class="hero-card__label">Current local time</p>
+                      <strong id="local-time">Loading…</strong>
+                    </div>
+                    <p class="visual-anchor__note">
+                      Quiet systems · careful iteration · durable interfaces
+                    </p>
                   </div>
-                  <p class="visual-anchor__note">Quiet systems · careful iteration · durable interfaces</p>
+
+                  <div class="visual-anchor__stack">
+                    <div class="anchor-card anchor-card--soft">
+                      <span class="anchor-card__label">01</span>
+                      <p>Minimal personal homepage.</p>
+                    </div>
+                    <div class="anchor-card anchor-card--solid">
+                      <span class="anchor-card__label">02</span>
+                      <p>Warm palette, premium restraint, understated motion.</p>
+                    </div>
+                  </div>
                 </div>
                 <div class="visual-anchor__mark">KZQ</div>
               </div>
@@ -92,23 +107,23 @@
           </div>
         </section>
 
-        <section class="bridge reveal" data-delay="0.14">
-          <p class="bridge__label">Intro</p>
-          <p class="bridge__text">
-            A restrained homepage for work in progress, current interests, and notes still waiting to be written.
+        <section class="intro reveal" id="intro" data-delay="0.14">
+          <p class="intro__label">Intro</p>
+          <p class="intro__text">
+            A restrained homepage for current work, working principles, and notes still waiting to be written.
           </p>
         </section>
 
-        <section class="overview reveal" id="overview" data-delay="0.2">
+        <section class="practice reveal" id="practice" data-delay="0.18">
           <div class="section-rail">
-            <p class="eyebrow">Overview</p>
-            <h2>Only the essentials, ordered with intention.</h2>
+            <p class="eyebrow">Approach</p>
+            <h2>The essentials, ordered into a clearer vertical rhythm.</h2>
           </div>
 
-          <div class="detail-list">
-            <article class="detail-row">
-              <span class="detail-row__index">01</span>
-              <div class="detail-row__body">
+          <div class="practice__list">
+            <article class="practice-row">
+              <span class="practice-row__index">01</span>
+              <div class="practice-row__body">
                 <h3>Focus</h3>
                 <p>
                   Practical software, restrained aesthetics, and systems that feel reliable before they try to feel impressive.
@@ -116,46 +131,43 @@
               </div>
             </article>
 
-            <article class="detail-row">
-              <span class="detail-row__index">02</span>
-              <div class="detail-row__body">
+            <article class="practice-row">
+              <span class="practice-row__index">02</span>
+              <div class="practice-row__body">
                 <h3>Working style</h3>
                 <p>
                   Reduce noise, define the structure early, and keep each pass clear enough that the next one can happen without friction.
                 </p>
               </div>
             </article>
-
-            <article class="detail-row" id="notes">
-              <span class="detail-row__index">03</span>
-              <div class="detail-row__body">
-                <h3>Notes</h3>
-                <p>
-                  A placeholder for observations, implementation details, and unfinished thoughts worth returning to later.
-                </p>
-              </div>
-            </article>
-
-            <article class="detail-row detail-row--link">
-              <span class="detail-row__index">04</span>
-              <div class="detail-row__body">
-                <h3>GitHub</h3>
-                <a
-                  class="project-link"
-                  href="https://github.com/kuangzhiqin"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span class="project-link__label">github.com/kuangzhiqin</span>
-                  <span class="project-link__title">Code, experiments, and work in progress ↗</span>
-                </a>
-              </div>
-            </article>
           </div>
+        </section>
+
+        <section class="notes-grid reveal" id="notes" data-delay="0.22">
+          <article class="notes-panel notes-panel--primary">
+            <p class="eyebrow">Notes</p>
+            <h2>A placeholder for observations and unfinished thoughts worth returning to later.</h2>
+            <p>
+              Notes will live here once they are clear enough to keep — implementation details, small discoveries, and useful fragments that survive the first draft.
+            </p>
+          </article>
+
+          <article class="notes-panel notes-panel--secondary">
+            <p class="eyebrow">GitHub</p>
+            <a
+              class="project-link"
+              href="https://github.com/kuangzhiqin"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="project-link__label">github.com/kuangzhiqin</span>
+              <span class="project-link__title">Code, experiments, and work in progress ↗</span>
+            </a>
+          </article>
         </section>
       </main>
 
-      <footer class="site-footer reveal" data-delay="0.24">
+      <footer class="site-footer reveal" data-delay="0.26">
         <span>© <span id="year">2026</span> Kuang Zhiqin</span>
         <a href="#top">Back to top</a>
       </footer>
